@@ -10,6 +10,11 @@
         public int PageSize { get; set; }
         public int TotalPages => (int)Math.Ceiling((double) TotalRecords / PageSize);
 
+        public PaginatedResult()
+        {
+
+        }
+
         public PaginatedResult(List<T> data, int totalRecords, int pageNumber, int pageSize)
         { 
             Data = data;
